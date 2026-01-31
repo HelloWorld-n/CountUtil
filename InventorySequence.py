@@ -5,11 +5,11 @@ import os
 os.chdir(os.path.dirname(__file__))
 os.system("")
 
-def calc(required_value_number: int):
+def calc(required_value_number: int) -> int:
     values = {}
     current_count = 0
     new_value = 0
-    for i in range(required_value_number):
+    for _ in range(required_value_number):
         if current_count not in values:
             values[current_count] = 0
         new_value = values[current_count]
@@ -40,4 +40,6 @@ if __name__ == "__main__":
             current_count += 1
         print(f"calc({i}) == {new_value}")
         i += 1
+        if i > 10:
+            break
 
