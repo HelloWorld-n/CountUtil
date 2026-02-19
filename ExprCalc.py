@@ -1,3 +1,4 @@
+#!/bin/python3
 from decimal import Decimal, getcontext
 
 from Utils.simplify import simplify

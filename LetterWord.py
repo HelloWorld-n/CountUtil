@@ -13,7 +13,7 @@ if not os.path.isfile(PATH_DATA):
     with open(PATH_DATA, "w") as file:
         file.write("{}")
 with open(PATH_DATA, "r") as file:
-    json_data = json5.loads(file.read())
+    json_data: typing.Any = json5.loads(file.read())
     ALPHABET: typing.Final[str] = (
         json_data['ALPHABET']
     if 'ALPHABET' in json_data else
